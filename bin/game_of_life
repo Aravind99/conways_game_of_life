@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "game_of_life"
+
+error = false
+
+if ARGV.length < 1
+  puts 'please provide width:value height:value seed_probability:value'
+  puts 'Try running'
+  puts 'game_of_life width:3 height:3 seed_probability:true'
+else
+  ARGV.each do |arg|
+    argument = arg.split(':')
+    unless %w(width height seed_probability).include? argument[0]
+      puts "Invalid option #{argument[0]}"
+      error = true
+    end
+    eval("@#{argument[0]}=#{argument[1]}")
+  end
+
+  if error
+    puts 'Valid options are width:value height:value seed_probability:value'
+  else
+    GameOfLife::Cli.start(@width, @height, @seed_probability)
+  end
+end

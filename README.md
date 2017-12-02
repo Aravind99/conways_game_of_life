@@ -23,8 +23,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-$ game_of_life width:6 height:6 seed_probability:0.5
-$  
+$ game_of_life width:6 height:6 seed_probability:0.5  
 ```
 
 ## Development
