@@ -1,7 +1,7 @@
 require_relative '../../spec_helper'
 
 RSpec.describe GameOfLife::Cell do
-  context 'utilities methods' do
+  context 'methods' do
     let(:cell) { GameOfLife::Cell.new(rand) }
 
     it 'raise error if input is not valid' do
@@ -24,9 +24,9 @@ RSpec.describe GameOfLife::Cell do
 
     it '#state method should return its state' do
       cell.alive = true
-      expect(cell.state).to eq 1
+      expect(cell.bool_to_num).to eq 1
       cell.alive = false
-      expect(cell.state).to eq 0
+      expect(cell.bool_to_num).to eq 0
     end
 
     it '#die! method kills cell' do

@@ -1,8 +1,8 @@
 module GameOfLife
   # GameOfLife::Cell is a grid element where
   # GameOfLife::Earth is a grid
-  # This will mutate based on rules
-  # Rules
+  # This @object will mutate based on following
+  # Rules (see #next!)
   # Examples based on center element
   # 1. Any live cell with fewer than 2 neighbors dies,
   #    as if caused by under population.
@@ -82,7 +82,7 @@ module GameOfLife
     end
 
     # @return 1 or 0
-    def state
+    def bool_to_num
       alive ? 1 : 0
     end
 

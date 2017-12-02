@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Conway's Game of Life implemented in ruby}
   spec.description   = %q{Conway's Game of Life is a life, birth and death game with set of rules}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Aravind99/game_of_life"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
   else
-    raise "RubyGems 2.0 or newer is required to protect against " \
+    raise "RubyGems 2.0 or newer is required to protect against " +
       "public gem pushes."
   end
 
