@@ -9,6 +9,12 @@ require "game_of_life"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-
+puts 'width = integer, height = integer, seed_probability <= 1'
+puts 'game = GameOfLife::Earth.new(width, height, seed_probability)'
+puts 'game.log'
+puts 'game.next!'
+puts 'game.log'
+puts 'game.next!'
+puts 'game.log'
 require "irb"
 IRB.start(__FILE__)

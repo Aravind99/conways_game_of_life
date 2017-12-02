@@ -2,6 +2,7 @@ require 'game_of_life/version'
 require 'game_of_life/earth'
 require 'game_of_life/cell'
 require 'game_of_life/exceptions'
+require 'game_of_life/cli'
 
 def reload
   load 'game_of_life/earth.rb'

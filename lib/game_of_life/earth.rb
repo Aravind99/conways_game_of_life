@@ -8,6 +8,7 @@ module GameOfLife
     attr_reader   :height, :width
 
     def initialize(width, height, seed_probability = nil)
+      @generation = 1
       seed_probability = rand if seed_probability.nil?
 
       @width  = width
@@ -26,6 +27,7 @@ module GameOfLife
     end
 
     def next!
+      @generation += 1
       @cells.each_with_index do |col, x|
         col.each_with_index do |cell, y|
           cell.neighbours = alive_neighbours(x, y)
@@ -57,6 +59,7 @@ module GameOfLife
     end
 
     def log
+      puts "Generation #{@generation}"
       @cells.each do |row|
         puts row.map(&:bool_to_num).join(' | ')
       end

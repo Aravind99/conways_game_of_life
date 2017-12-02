@@ -22,7 +22,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+$ game_of_life width:6 height:6 seed_probability:0.5
+$  
+```
 
 ## Development
 
