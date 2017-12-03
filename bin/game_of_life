@@ -8,12 +8,12 @@ error = false
 if ARGV.length < 1
   puts 'please provide width:value height:value seed_probability:value'
   puts 'Try running'
-  puts 'game_of_life width:3 height:3 seed_probability:true'
+  puts 'conways_game_of_life width:3 height:3 seed_probability:true'
 else
   ARGV.each do |arg|
     argument = arg.split(':')
     next if argument.length < 2
-    unless %w(width height seed_probability).include? argument[0]
+    unless %w(width height seed_probability speed).include? argument[0]
       puts "Invalid option #{argument[0]}"
       error = true
     end

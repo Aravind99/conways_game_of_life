@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['aravind99']
   spec.email         = ['aravind@classpro.in']
   spec.summary       = 'Conway\'s Game of Life implemented in ruby'
-  spec.homepage      = 'https://github.com/Aravind99/game_of_life'
+  spec.homepage      = 'https://github.com/Aravind99/conways_game_of_life'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.require_path  = ['lib']
   spec.bindir        = 'bin'
-  spec.executables   = ['game_of_life']
+  spec.executables   = ['conways_game_of_life']
 
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'rake', '~> 10.0'
