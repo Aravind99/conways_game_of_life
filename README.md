@@ -61,7 +61,7 @@ Generation 2
 
 ```
 
-$ git clone https://github.com/aravind99/game_of_life.git 
+$ git clone https://github.com/aravind99/conways_game_of_life.git 
 $ cd game_of_life
 $ bin/game_of_life width:6 height:6 seed_probability:0.5 speed:1  
 
