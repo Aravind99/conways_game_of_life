@@ -12,6 +12,7 @@ if ARGV.length < 1
 else
   ARGV.each do |arg|
     argument = arg.split(':')
+    next if argument.length < 2
     unless %w(width height seed_probability).include? argument[0]
       puts "Invalid option #{argument[0]}"
       error = true
@@ -22,6 +23,6 @@ else
   if error
     puts 'Valid options are width:value height:value seed_probability:value'
   else
-    GameOfLife::Cli.start(@width, @height, @seed_probability)
+    GameOfLife::Cli.start(@width, @height, @seed_probability, @speed)
   end
 end

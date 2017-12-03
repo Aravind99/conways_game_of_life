@@ -1,36 +1,26 @@
 # coding: utf-8
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "game_of_life/version"
+require 'game_of_life/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "game_of_life"
+  spec.name          = 'game_of_life'
   spec.version       = GameOfLife::VERSION
-  spec.authors       = ["aravind99"]
-  spec.email         = ["aravind@classpro.in"]
-
-  spec.summary       = %q{Conway's Game of Life implemented in ruby}
-  spec.description   = %q{Conway's Game of Life is a life, birth and death game with set of rules}
-  spec.homepage      = "https://github.com/Aravind99/game_of_life"
-  spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "https://rubygems.org"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " +
-      "public gem pushes."
-  end
+  spec.authors       = ['aravind99']
+  spec.email         = ['aravind@classpro.in']
+  spec.summary       = 'Conway\'s Game of Life implemented in ruby'
+  spec.homepage      = 'https://github.com/Aravind99/game_of_life'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.require_path  = ['lib']
+  spec.bindir        = 'bin'
+  spec.executables   = ['game_of_life']
+
+  spec.add_development_dependency 'bundler', '~> 1.15'
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec', '~> 3.0'
 end

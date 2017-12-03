@@ -59,11 +59,13 @@ module GameOfLife
     end
 
     def log
-      puts "Generation #{@generation}"
+      grid = "Generation #{@generation}"
       @cells.each do |row|
-        puts row.map(&:bool_to_num).join(' | ')
+        grid += "\n"
+        grid += row.map(&:bool_to_num).join(' | ')
       end
-      nil
+      grid += "\n"
+      grid
     end
   end
 end
