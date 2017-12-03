@@ -10,7 +10,7 @@ module GameOfLife
   #   cell = 1
   #   cell.next! = 0 if cell.neighbors < 2
   #   1 = alive
-  #   0 = died
+  #   0 = dead
   # | 0 | 0 | 0 |    | 0 | 0 | 0 |
   # | 1 | 1 | 0 | => | 0 | 0 | 0 |
   # | 0 | 0 | 0 |    | 0 | 0 | 0 |
@@ -21,7 +21,7 @@ module GameOfLife
   #   cell = 1
   #   cell.next! = 0 if cell.neighbors > 3
   #   1 = alive
-  #   0 = died
+  #   0 = dead
   # | 0 | 1 | 0 |    | 0 | 1 | 0 |
   # | 1 | 1 | 0 | => | 1 | 0 | 0 |
   # | 0 | 1 | 1 |    | 0 | 1 | 0 |
@@ -31,17 +31,17 @@ module GameOfLife
   #   cell = 1
   #   cell.next! = 1 if cell.neighbors == 3 or cell.neighbors == 2
   #   1 = alive
-  #   0 = died
+  #   0 = dead
   # | 0 | 1 | 0 |    | 0 | 1 | 0 |
   # | 1 | 1 | 0 | => | 1 | 1 | 0 |
   # | 0 | 1 | 0 |    | 0 | 1 | 0 |
-  # 4. Any live cell with 2 or 3 live neighbors
+  # 4. Any dead cell with more than 3 live neighbors
   #    lives on to next! generation,
   # Example:
   #   cell = 0
-  #   cell.next! = 1 if cell.neighbors == 3
+  #   cell.next! = 1 if cell.neighbors > 3
   #   1 = alive
-  #   0 = died
+  #   0 = dead
   # | 0 | 1 | 0 |    | 0 | 0 | 0 |
   # | 1 | 0 | 0 | => | 0 | 1 | 0 |
   # | 0 | 1 | 0 |    | 0 | 0 | 0 |
@@ -86,7 +86,7 @@ module GameOfLife
       alive ? 1 : 0
     end
 
-    # change @alive = false
+    # change @alive => false
     def die!
       @alive = false
     end

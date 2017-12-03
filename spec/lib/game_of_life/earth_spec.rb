@@ -50,13 +50,13 @@ RSpec.describe GameOfLife::Earth do
     end
     # end of top row
 
-    # middle row [-1, 0], self, [1, 0]
+    # middle row [-1, 0], [1, 0]
     it 'detects neighbour on the left [-1, 0]' do
       earth[0][1].relive!
       expect(earth.alive_neighbours(1,1)).to eq 1
     end
 
-    it 'should not detect itself as neighbour nil' do
+    it 'should not detect itself as neighbour' do
       earth[1][1].relive!
       expect(earth.alive_neighbours(1,1)).to eq 0
     end

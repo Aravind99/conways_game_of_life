@@ -22,7 +22,7 @@ RSpec.describe GameOfLife::Cell do
       expect(cell.alive?).to be_falsey
     end
 
-    it '#state method should return its state' do
+    it '#bool_to_num method should return 1  if alive, 0 if dead' do
       cell.alive = true
       expect(cell.bool_to_num).to eq 1
       cell.alive = false
