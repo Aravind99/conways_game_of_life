@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install conway_game_of_life
+    $ gem install conways_game_of_life
     $ game_of_life width:5 height:5 seed_probability:0.5 speed:1
 
 ## Usage
