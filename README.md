@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/conways_game_of_life.svg)](https://badge.fury.io/rb/conways_game_of_life)
 
 # GameOfLife
 
