@@ -11,9 +11,9 @@ module GameOfLife
   #   cell.next! = 0 if cell.neighbors < 2
   #   1 = alive
   #   0 = dead
-  # | 0 | 0 | 0 |    | 0 | 0 | 0 |
-  # | 1 | 1 | 0 | => | 0 | 0 | 0 |
-  # | 0 | 0 | 0 |    | 0 | 0 | 0 |
+  #   | 0 | 0 | 0 |    | 0 | 0 | 0 |
+  #   | 1 | 1 | 0 | => | 0 | 0 | 0 |
+  #   | 0 | 0 | 0 |    | 0 | 0 | 0 |
   #
   # 2. Any live cell with more than 3 live neighbors dies,
   #    as if by overcrowding.
@@ -22,9 +22,10 @@ module GameOfLife
   #   cell.next! = 0 if cell.neighbors > 3
   #   1 = alive
   #   0 = dead
-  # | 0 | 1 | 0 |    | 0 | 1 | 0 |
-  # | 1 | 1 | 0 | => | 1 | 0 | 0 |
-  # | 0 | 1 | 1 |    | 0 | 1 | 0 |
+  #   | 0 | 1 | 0 |    | 0 | 1 | 0 |
+  #   | 1 | 1 | 0 | => | 1 | 0 | 0 |
+  #   | 0 | 1 | 1 |    | 0 | 1 | 0 |
+  #
   # 3. Any live cell with 2 or 3 live neighbors
   #    lives on to next! generation,
   # Example:
@@ -32,9 +33,10 @@ module GameOfLife
   #   cell.next! = 1 if cell.neighbors == 3 or cell.neighbors == 2
   #   1 = alive
   #   0 = dead
-  # | 0 | 1 | 0 |    | 0 | 1 | 0 |
-  # | 1 | 1 | 0 | => | 1 | 1 | 0 |
-  # | 0 | 1 | 0 |    | 0 | 1 | 0 |
+  #   | 0 | 1 | 0 |    | 0 | 1 | 0 |
+  #   | 1 | 1 | 0 | => | 1 | 1 | 0 |
+  #   | 0 | 1 | 0 |    | 0 | 1 | 0 |
+  #
   # 4. Any dead cell with more than 3 live neighbors
   #    lives on to next! generation,
   # Example:
@@ -42,9 +44,9 @@ module GameOfLife
   #   cell.next! = 1 if cell.neighbors > 3
   #   1 = alive
   #   0 = dead
-  # | 0 | 1 | 0 |    | 0 | 0 | 0 |
-  # | 1 | 0 | 0 | => | 0 | 1 | 0 |
-  # | 0 | 1 | 1 |    | 0 | 0 | 0 |
+  #   | 0 | 1 | 0 |    | 0 | 0 | 0 |
+  #   | 1 | 0 | 0 | => | 0 | 1 | 0 |
+  #   | 0 | 1 | 1 |    | 0 | 0 | 0 |
   class Cell
     attr_accessor :alive, :neighbours
 
