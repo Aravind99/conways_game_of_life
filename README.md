@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/conways_game_of_life.svg)](https://badge.fury.io/rb/conways_game_of_life)
+[![Gem Version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=rb&type=6&v=1.0.3&x2=0)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=rb&type=6&v=1.0.3&x2=0)
 # GameOfLife
 
 This gem is an implementation of conway's game of life
