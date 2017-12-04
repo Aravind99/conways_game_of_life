@@ -44,7 +44,7 @@ module GameOfLife
   #   0 = dead
   # | 0 | 1 | 0 |    | 0 | 0 | 0 |
   # | 1 | 0 | 0 | => | 0 | 1 | 0 |
-  # | 0 | 1 | 0 |    | 0 | 0 | 0 |
+  # | 0 | 1 | 1 |    | 0 | 0 | 0 |
   class Cell
     attr_accessor :alive, :neighbours
 
