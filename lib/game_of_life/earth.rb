@@ -60,7 +60,7 @@ module GameOfLife
 
     def log
       grid = "Generation #{@generation}"
-      @cells.each do |row|
+      @cells.transpose.each do |row|
         grid += "\n"
         grid += row.map(&:bool_to_num).join(' | ')
       end
