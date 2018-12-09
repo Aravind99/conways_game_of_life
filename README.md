@@ -1,4 +1,4 @@
-[![Gem Version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=rb&type=6&v=1.0.3&x2=0)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=rb&type=6&v=1.0.3&x2=0)
+[![Gem Version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=rb&type=6&v=1.0.3&x2=0)](https://rubygems.org/gems/conways_game_of_life)
 # GameOfLife
 
 This gem is an implementation of conway's game of life
@@ -60,7 +60,7 @@ Generation 2
 
 ```
 
-$ git clone https://github.com/aravind99/conways_game_of_life.git 
+$ git clone https://github.com/vemarav/conways_game_of_life.git 
 $ cd game_of_life
 $ bin/game_of_life width:6 height:6 seed_probability:0.5 speed:1  
 
@@ -74,7 +74,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Aravind99/game_of_life.
+Bug reports and pull requests are welcome on GitHub at https://github.com/vemarav/conways_game_of_life.
 
 ## License
 
